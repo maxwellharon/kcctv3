@@ -277,7 +277,7 @@ section { position: relative; }
 @media (max-width: 800px) { .pledge { grid-template-columns: 1fr; } }
 
 /* ---------- partners strip ---------- */
-.partner-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin-top: 36px; }
+.partner-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 36px; }
 .partner-chip { background: #fff; border: 1px solid var(--line); border-radius: var(--leaf-sm); padding: 20px 14px; text-align: center; display: grid; gap: 6px; justify-items: center; align-content: center; min-height: 128px; }
 .partner-chip strong { font-family: var(--serif); font-size: 1.08rem; line-height: 1.25; }
 .partner-chip span { font-size: .84rem; color: var(--muted); }
@@ -658,10 +658,8 @@ input:focus, select:focus, textarea:focus { transform: translateY(-1px); }
 }
 main, .site-footer { overflow-x: clip; }
 
-/* partner wordmark tiles */
-.wm { font-family: var(--serif); font-weight: 700; letter-spacing: .01em; color: var(--purple); }
-.partner-chip strong.wm { font-size: 1.45rem; }
-.pcard .logo.wm { font-size: 1.05rem; text-align: center; padding: 0 6px; line-height: 1.1; }
-.pcard-cta { text-decoration: none; color: inherit; border-style: dashed; background: var(--lilac); }
-.pcard-cta .logo { background: #fff; font-size: 2.4rem; color: var(--pink-deep); }
-.pcard-cta:hover h3 { color: var(--pink-deep); }
+/* Partner logo polish */
+.partner-chip img { height: 56px; width: 56px; object-fit: contain; border-radius: 14px; }
+.partner-chip { transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .3s ease; }
+.pcard .logo.contain { background: #fff; border: 1px solid var(--line); }
+.pcard .logo.contain img { padding: 6px; }
