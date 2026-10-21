@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Kenya Cervical Cancer Foundation Trust — site styles
+   Kenya Cervical Cancer Trust — site styles
    Palette: purple · pink · green. No frameworks, no icon fonts.
    ========================================================================== */
 
@@ -663,3 +663,99 @@ main, .site-footer { overflow-x: clip; }
 .partner-chip { transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .3s ease; }
 .pcard .logo.contain { background: #fff; border: 1px solid var(--line); }
 .pcard .logo.contain img { padding: 6px; }
+
+/* ==========================================================================
+   SLEEK PASS — refined, airy, quieter. Overrides only; content untouched.
+   ========================================================================== */
+:root {
+  --leaf: 20px;
+  --leaf-sm: 999px;
+  --shadow: 0 1px 2px rgba(43,18,69,.04), 0 18px 40px -22px rgba(43,18,69,.22);
+  --line: #ece4f3;
+}
+body { font-size: 1rem; line-height: 1.7; }
+h1, h2, h3, h4 { font-weight: 500; letter-spacing: -0.02em; line-height: 1.12; }
+h1 { letter-spacing: -0.03em; }
+h3 { font-size: 1.2rem; font-weight: 600; }
+.lead { font-size: 1.12rem; }
+.section { padding-block: clamp(64px, 9vw, 120px); }
+
+/* eyebrow: quieter */
+.eyebrow { font-size: .72rem; letter-spacing: .2em; font-weight: 600; margin-bottom: 18px; }
+.eyebrow::before { width: 20px; height: 1px; }
+
+/* buttons: pill, softer */
+.btn { padding: 14px 26px; font-weight: 600; font-size: .95rem; border-width: 1.5px; letter-spacing: .005em; }
+.btn-primary { box-shadow: 0 10px 24px -12px rgba(85,38,127,.7); }
+.btn-primary:hover, .btn-pink:hover { transform: translateY(-2px); }
+.btn-ghost { border-color: rgba(85,38,127,.28); }
+.btn-ghost:hover { border-color: var(--purple); }
+
+/* header: slim, frosted, no hard rule */
+.topbar { font-size: .78rem; letter-spacing: .01em; }
+.topbar .wrap { min-height: 34px; }
+.site-header { background: rgba(255,255,255,.78); backdrop-filter: saturate(1.6) blur(18px); -webkit-backdrop-filter: saturate(1.6) blur(18px); border-bottom: 1px solid rgba(85,38,127,.07); }
+.site-header .wrap { min-height: 72px; }
+.brand img { height: 46px; }
+.nav a.link { font-weight: 500; font-size: .9rem; border-radius: 999px; padding: 9px 13px; }
+.nav a.link[aria-current="page"] { background: var(--lilac); }
+.nav a.link[aria-current="page"]::after { display: none; }
+.nav .btn { padding: 10px 22px; }
+
+/* hero: soft wash instead of flat block */
+.hero { background: radial-gradient(1200px 520px at 85% 0%, #efe3f9 0%, rgba(239,227,249,0) 60%), linear-gradient(180deg, #faf6fd 0%, #fff 100%); }
+.hero h1 { font-size: clamp(2.5rem, 5.2vw, 4.2rem); }
+.hero p.lead { color: #5d4a73; }
+.page-hero { background: linear-gradient(180deg, #f8f2fc 0%, #fff 100%); border-bottom: 1px solid var(--line); }
+.hero-art .main, .hero-art .second { box-shadow: 0 30px 60px -30px rgba(43,18,69,.45); }
+.promise li { font-weight: 500; font-size: .92rem; }
+
+/* marquee: slim, calm */
+.marquee { background: var(--ink); border: 0; }
+.marquee .track { padding-block: 11px; }
+.marquee span { font-size: 1rem; opacity: .9; }
+
+/* stats: hairline, no heavy bars */
+.stat { border-top: 0; background: transparent; position: relative; padding: 28px 24px; }
+.stat::before { content: ""; position: absolute; left: 24px; top: 0; width: 36px; height: 2px; background: var(--purple); }
+.stat:nth-child(2)::before { background: var(--pink); }
+.stat:nth-child(3)::before { background: var(--green); }
+.stat:nth-child(4)::before { background: var(--purple-2); }
+.stats:not(.cards) { background: #fff; border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); }
+.stats:not(.cards) .stat + .stat { border-left: 1px solid var(--line); }
+.stats.cards .stat { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: none; }
+.stat .num { font-weight: 500; }
+
+/* photos & cards: calmer geometry */
+.photo, .photo.leaf-r, .photo.leaf-l { border-radius: 24px; }
+.feature { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 30px 28px 32px; box-shadow: none; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.feature:nth-child(3n+2), .feature:nth-child(3n+3) { background: #fff; }
+.feature:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+.feature .mark { width: 46px; height: 46px; padding: 11px; border-radius: 14px; background: var(--lilac); margin-bottom: 20px; }
+.feature:nth-child(3n+2) .mark { background: var(--blush); }
+.feature:nth-child(3n+3) .mark { background: var(--mint); }
+.camp, .partner-chip { border-radius: 18px; }
+.camp { transition: transform .25s ease, box-shadow .25s ease; }
+.camp:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.faq details { border-radius: 16px; }
+.step::before { font-weight: 400; }
+.mosaic a, .mosaic a:nth-child(1) { border-radius: 18px; }
+.mosaic a:nth-child(1) { border-radius: 18px 90px 18px 18px; }
+
+/* bands */
+.bg-lilac { background: #faf6fd; }
+.tricolor { height: 3px; }
+.cta { background: linear-gradient(120deg, var(--purple) 0%, #3d1a5e 100%); }
+.on-dark { background: linear-gradient(180deg, #2b1245, #231038); }
+.site-footer { font-size: .95rem; }
+
+/* gentle entrance */
+@media (prefers-reduced-motion: no-preference) {
+  .hero .wrap > * { animation: sleekIn .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .wrap > *:nth-child(2) { animation-delay: .12s; }
+  @keyframes sleekIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+}
+@media (max-width: 900px) {
+  .stats:not(.cards) .stat + .stat { border-left: 0; border-top: 1px solid var(--line); }
+  .brand img { height: 42px; }
+}
